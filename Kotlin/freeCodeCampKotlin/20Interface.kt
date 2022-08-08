@@ -1,4 +1,4 @@
-//Interface in Kotlin
+//Interface in Kotlin _ 1
 
 //main.it & Person.kt is same as previous 18
 
