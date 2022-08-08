@@ -1,5 +1,7 @@
 //Interface in Kotlin - 2
 
+//main.it & Person.kt is same as previous 18
+
 interface PersonInfoProvider {
 
     val providerInfo : String
