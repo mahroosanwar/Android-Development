@@ -1,5 +1,7 @@
 //Interface in Kotlin
 
+//main.it & Person.kt is same as previous 19
+
 interface PersonInfoProvider {
     fun printInfo(person: Person)
 }
