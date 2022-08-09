@@ -1,4 +1,4 @@
-import java.util.UUID
+import java.util.*
 
 //Enum Classes
 enum class EntityType{
@@ -10,7 +10,7 @@ enum class EntityType{
 
 object EntityFactory {
 
-    fun create(type: EntityType) : Entity {
+    fun create(type: EntityType): Entity {
 
         val id = UUID.randomUUID().toString()
 
@@ -36,7 +36,7 @@ fun main() {
     val entity = EntityFactory.create()
     println(entity)
 
-    val mediumEntity = EntityFactory.create(EntityType.MEDIUM)
+    val mediumEntity = EntityFactory.create()
 
     println(mediumEntity)
 }
