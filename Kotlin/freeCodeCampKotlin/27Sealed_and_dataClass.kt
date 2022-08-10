@@ -1,6 +1,7 @@
 import java.util.*
 
 //Sealed Class : allow us to defined restricted class hierarchy
+//Data Class :: it provide v esy concise , immutable datatypes
 
 enum class EntityType{
     HELP, EASY, MEDIUM, HARD;
