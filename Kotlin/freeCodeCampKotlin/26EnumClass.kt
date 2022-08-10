@@ -1,7 +1,5 @@
 import java.util.*
 
-//Sealed Class : allow us to defined restricted class hierarchy
-
 //Enum Classes
 enum class EntityType{
     EASY, MEDIUM, HARD;
