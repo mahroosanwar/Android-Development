@@ -1,5 +1,7 @@
 import java.util.*
 
+//Sealed Class : allow us to defined restricted class hierarchy
+
 //Enum Classes
 enum class EntityType{
     EASY, MEDIUM, HARD;
@@ -14,29 +16,24 @@ object EntityFactory {
 
         val id = UUID.randomUUID().toString()
 
-        val name = when(type) {
+        val name =  when(type) {
             EntityType.EASY -> type.name
             EntityType.MEDIUM -> type.getFormattedName()
             EntityType.HARD -> "Hard"
         }
-
-        return Entity(id, name = "name")
+        return Entity(id, name)
     }
-
 }
+
 class Entity (val id: String, val name: String) {
     override fun toString(): String {
         return "id:$id name: $name"
     }
 }
-
 fun main() {
 //    val entity = Entity(id:"id")  /*error: can't access privater to entity, so we have to use companion object */
-
-    val entity = EntityFactory.create()
+    val entity = EntityFactory.create(EntityType.EASY)
     println(entity)
-
-    val mediumEntity = EntityFactory.create()
-
+    val mediumEntity = EntityFactory.create(EntityType.MEDIUM)
     println(mediumEntity)
 }
