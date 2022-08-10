@@ -14,10 +14,10 @@ object EntityFactory {
 
         val id = UUID.randomUUID().toString()
 
-        val name: when(type) {
+        val name = when(type) {
             EntityType.EASY -> type.name
             EntityType.MEDIUM -> type.getFormattedName()
-            EntityType.HARD -> "Hard
+            EntityType.HARD -> "Hard"
         }
 
         return Entity(id, name = "name")
